@@ -1,3 +1,13 @@
+.. image:: https://travis-ci.org/dstufft/django-passwords.svg?branch=master
+    :target: https://travis-ci.org/dstufft/django-passwords
+.. image:: https://img.shields.io/pypi/v/django-passwords.svg
+    :target: https://pypi.python.org/pypi/django-passwords/
+.. image:: https://img.shields.io/pypi/dm/django-passwords.svg
+    :target: https://pypi.python.org/pypi/django-passwords/
+.. image:: https://img.shields.io/pypi/l/django-passwords.svg
+    :target: https://pypi.python.org/pypi/django-passwords/
+
+
 Django Passwords
 ================
 
@@ -22,7 +32,7 @@ Or manually by downloading a tarball and typing::
 Compatibility
 -------------
 
-django-passwords is compatible with Django 1.2 through 1.8 alpha. Pythons 2.7
+django-passwords is compatible with Django 1.3 through 1.9 RC1. Pythons 2.7
 and 3.4 are both supported.
 
 Settings
@@ -58,7 +68,6 @@ Optional:
             "LOWER": 1,        # Lowercase
             "LETTERS": 1,       # Either uppercase or lowercase letters
             "DIGITS": 1,       # Digits
-            "PUNCTUATION": 1,  # Punctuation (string.punctuation)
             "SPECIAL": 1,      # Not alphanumeric, space or punctuation character
             "WORDS": 1         # Words (alphanumeric sequences separated by a whitespace or punctuation character)
         }
@@ -102,5 +111,5 @@ configurations:
             UPPER=1,
             LOWER=1,
             DIGITS=1
-        })),
+        )),
     ])

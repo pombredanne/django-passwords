@@ -1,96 +1,97 @@
+# This file is distributed under the same license as the django-passwords package.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: django-passwords\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-27 12:30+0200\n"
-"PO-Revision-Date: 2015-08-27 14:09+0200\n"
-"Language: de\n"
+"POT-Creation-Date: 2015-11-20 12:17+0200\n"
+"PO-Revision-Date: 2015-11-20 12:17+0200\n"
+"Last-Translator: Venelin Stoykov <vkstoykov@gmail.com>\n"
+"Language-Team: Bulgarian <bg@li.org>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Christian Schürmann <christian.schuermann@bluewin.ch>\n"
-"Language-Team: \n"
-"X-Generator: Poedit 1.8.4\n"
 
 #: fields.py:27
 #, python-format
 msgid "%i to %i characters"
-msgstr "Zwischen %i und %i Zeichen"
+msgstr "От %i до %i символа"
 
 #: fields.py:31
 #, python-format
 msgid "%i characters minimum"
-msgstr "Mindestens %i Zeichen"
+msgstr "Минимум %i символа"
 
 #: validators.py:47
 #, python-format
 msgid "Invalid Length (%s)"
-msgstr "Ungültige Länge (%s)"
+msgstr "Невалидна дължина (%s)"
 
 #: validators.py:57
 #, python-format
 msgid "Must be %s characters or more"
-msgstr "Es müssen %s oder mehr Zeichen enthalten sein"
+msgstr "Трябва да бъде поне %s символа"
 
 #: validators.py:59
 #, python-format
 msgid "Must be %s characters or less"
-msgstr "Es müssen %s oder weniger Zeichen enthalten sein"
+msgstr "Трябва да бъде не повече от %s символа"
 
 #: validators.py:66
 #, python-format
 msgid "Must be more complex (%s)"
-msgstr "Höhere Komplexität erforderlich (%s)"
+msgstr "Трябва да бъде по-сложна (%s)"
 
 #: validators.py:98
 #, python-format
 msgid "%(UPPER)s or more unique uppercase characters"
-msgstr "Es müssen %(UPPER)s oder mehr verschiedene Großbuchstaben vorhanden sein"
+msgstr "минимум %(UPPER)s главни букви"
 
 #: validators.py:102
 #, python-format
 msgid "%(LOWER)s or more unique lowercase characters"
-msgstr "Es müssen %(LOWER)s oder mehr verschiedene Kleinbuchstaben vorhanden sein"
+msgstr "минимум %(LOWER)s малки букви"
 
 #: validators.py:106
 #, python-format
 msgid "%(LETTERS)s or more unique letters"
-msgstr "Es müssen %(LETTERS)s oder mehr verschiedene Buchstaben vorhanden sein"
+msgstr "минимум %(LETTERS)s уникални букви"
 
 #: validators.py:110
 #, python-format
 msgid "%(DIGITS)s or more unique digits"
-msgstr "Es müssen %(DIGITS)s oder mehr verschiedene Zahlen vorhanden sein"
+msgstr "минимум %(DIGITS)s уникални цифри"
 
 #: validators.py:114
 #, python-format
 msgid "%(PUNCTUATION)s or more unique punctuation characters: %%s"
-msgstr "Es müssen %(PUNCTUATION)s oder mehr verschiedene Satzzeichen enthalten sein: %%s"
+msgstr "минимум %(PUNCTUATION)s уникални пунктоационни знаци"
 
 #: validators.py:118
 #, python-format
 msgid "%(SPECIAL)s or more non unique special characters"
-msgstr "Es müssen %(SPECIAL)s oder mehr Sonderzeichen enthalten sein"
+msgstr "минимум %(SPECIAL)s уникални специални символи"
 
 #: validators.py:122
 #, python-format
 msgid "%(WORDS)s or more unique words"
-msgstr "Es müssen %(WORDS)s oder mehr verschiedene Wörter enthalten sein"
+msgstr "минимум %(WORDS)s уникални думи"
 
-#: validators.py:119
+#: validators.py:126
 msgid "must contain "
-msgstr "erforderlich: "
+msgstr "трябва да съдържа "
 
 #: validators.py:132
 #, python-format
 msgid "Too Similar to [%(haystacks)s]"
-msgstr "Zu ähnlich zu [%(haystacks)s]"
+msgstr "Много прилича на [%(haystacks)s]"
 
 #: validators.py:176
 msgid "Based on a dictionary word"
-msgstr "Basiert auf einem Wort im Wörterbuch"
+msgstr "Често срещана парола"
 
 #: validators.py:195
 msgid "Based on a common sequence of characters"
-msgstr "Basiert auf einer verbreiteten Sequenz von Buchstaben"
+msgstr "Често срещана поредност на символи"

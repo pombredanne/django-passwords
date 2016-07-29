@@ -1,7 +1,6 @@
 # coding=utf-8
 from __future__ import division, unicode_literals
 
-import string
 import re
 
 from django.conf import settings
@@ -74,7 +73,7 @@ class ComplexityValidator(object):
             return
 
         uppercase, lowercase, letters = set(), set(), set()
-        digits, special, punctuation = set(), set(), set()
+        digits, special = set(), set()
 
         for character in value:
             if character.isupper():
@@ -85,8 +84,6 @@ class ComplexityValidator(object):
                 letters.add(character)
             elif character.isdigit():
                 digits.add(character)
-            elif character in string.punctuation:
-                punctuation.add(character)
             elif not character.isspace():
                 special.add(character)
 
@@ -95,37 +92,32 @@ class ComplexityValidator(object):
         errors = []
         if len(uppercase) < self.complexities.get("UPPER", 0):
             errors.append(
-                _("must contain %(UPPER)s or more unique uppercase characters") %
+                _("%(UPPER)s or more unique uppercase characters") %
                 self.complexities)
         if len(lowercase) < self.complexities.get("LOWER", 0):
             errors.append(
-                _("must contain %(LOWER)s or more unique lowercase characters") %
+                _("%(LOWER)s or more unique lowercase characters") %
                 self.complexities)
         if len(letters) < self.complexities.get("LETTERS", 0):
             errors.append(
-                _("must contain %(LETTERS)s or more unique letters") %
+                _("%(LETTERS)s or more unique letters") %
                 self.complexities)
         if len(digits) < self.complexities.get("DIGITS", 0):
             errors.append(
-                _("must contain %(DIGITS)s or more unique digits") %
+                _("%(DIGITS)s or more unique digits") %
                 self.complexities)
-        if len(punctuation) < self.complexities.get("PUNCTUATION", 0):
-            errors.append(
-                (_("must contain %(PUNCTUATION)s or more unique punctuation characters: %%s"
-                  ) % self.complexities) % string.punctuation)
         if len(special) < self.complexities.get("SPECIAL", 0):
             errors.append(
-                _("must contain %(SPECIAL)s or more non unique special characters") %
+                _("%(SPECIAL)s or more non unique special characters") %
                 self.complexities)
         if len(words) < self.complexities.get("WORDS", 0):
             errors.append(
-                _("must contain %(WORDS)s or more unique words") %
+                _("%(WORDS)s or more unique words") %
                 self.complexities)
 
         if errors:
-            raise ValidationError(self.message % (u', '.join(errors),),
+            raise ValidationError(self.message % (_(u'must contain ') + u', '.join(errors),),
                                   code=self.code)
-
 
 
 class BaseSimilarityValidator(object):
